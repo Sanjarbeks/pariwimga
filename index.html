@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Pari uchun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('pari.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Great Vibes', cursive;
+            color: white;
+            overflow: hidden;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        #name {
+            font-size: 4em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid orange;
+            width: 0;
+            animation: typing 2s steps(10) 1s forwards, blink .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 8ch }
+        }
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+        #message {
+            opacity: 0;
+            font-size: 1.5em;
+            max-width: 800px;
+            animation: fadeIn 3s ease-in 4s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .flower {
+            position: absolute;
+            width: 100px;
+            animation: float 10s infinite ease-in-out;
+            opacity: 0.8;
+        }
+        .flower.left {
+            bottom: 10%;
+            left: 5%;
+            animation-delay: 1s;
+        }
+        .flower.right {
+            top: 10%;
+            right: 5%;
+            animation-delay: 3s;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        audio {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <div id="name">Pari</div>
+        <div id="message">
+            <p>So‘nggi kunlarda sening qalbingda og‘riq borligini sezdim. Menga bo‘lgan ishonchingda shubha paydo bo'layotganini sezdim, va bu menga ham taskin bermayapti...</p>
+            <p>Men seni naqadar qadrlashimni, qanday bebaho inson ekaningni tushuntirib bera oladigan so‘z yo‘q. Sen faqat hayotimning bir qismi emas, sen uning eng muhim sababisan...</p>
+            <p>Ishon, men har kuni sen haqingda o‘ylayman. Qancha band bo‘lsam ham, charchaganimda ham, fikrim sendan uzoqlashmaydi, yuragim faqat sen tomonga tortadi...</p>
+            <p>Pari, meni eshit, menga ishon. Senga bo‘lgan sevgim – bu shunchaki yuzaki emas, bu har kuni, har daqiqa yuragimda yashayotgan haqiqatdir. Men seni doim sevaman.</p>
+        </div>
+    </div>
+    <img src="rose.png" class="flower left">
+    <img src="rose.png" class="flower right">
+    <audio autoplay loop controls>
+        <source src="davosan.mp3" type="audio/mpeg">
+        Sizning brauzeringiz audio formatni qo‘llab-quvvatlamaydi.
+    </audio>
+</body>
+</html>
